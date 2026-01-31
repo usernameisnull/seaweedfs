@@ -1,10 +1,29 @@
 ## 启动
 ```bash
 # start one master, one volume server, one filer, and one S3 gateway
+# /tmp/seaweed需要在启动命令前存在
+# server子命令是一个全家桶模式： start a master server, a volume server, and optionally a filer and a S3 gateway
 mkdir -p /tmp/seaweed 
 AWS_ACCESS_KEY_ID=admin AWS_SECRET_ACCESS_KEY=root@123! weed server -dir=/tmp/seaweed -s3
 ```
-
+启动后监听的端口
+```cgo
+➜ ss -tulnp | grep 797780
+tcp   LISTEN 0      4096       127.0.0.1:18333      0.0.0.0:*    users:(("weed",pid=797780,fd=65))
+tcp   LISTEN 0      4096   172.24.91.234:9333       0.0.0.0:*    users:(("weed",pid=797780,fd=7))
+tcp   LISTEN 0      4096   172.24.91.234:18333      0.0.0.0:*    users:(("weed",pid=797780,fd=63))
+tcp   LISTEN 0      4096       127.0.0.1:9333       0.0.0.0:*    users:(("weed",pid=797780,fd=8))
+tcp   LISTEN 0      4096   172.24.91.234:18080      0.0.0.0:*    users:(("weed",pid=797780,fd=16))
+tcp   LISTEN 0      4096   172.24.91.234:8333       0.0.0.0:*    users:(("weed",pid=797780,fd=61))
+tcp   LISTEN 0      4096       127.0.0.1:8888       0.0.0.0:*    users:(("weed",pid=797780,fd=55))
+tcp   LISTEN 0      4096       127.0.0.1:8333       0.0.0.0:*    users:(("weed",pid=797780,fd=64))
+tcp   LISTEN 0      4096   172.24.91.234:8888       0.0.0.0:*    users:(("weed",pid=797780,fd=54))
+tcp   LISTEN 0      4096   172.24.91.234:8080       0.0.0.0:*    users:(("weed",pid=797780,fd=17))
+tcp   LISTEN 0      4096       127.0.0.1:19333      0.0.0.0:*    users:(("weed",pid=797780,fd=11))
+tcp   LISTEN 0      4096   172.24.91.234:18888      0.0.0.0:*    users:(("weed",pid=797780,fd=56))
+tcp   LISTEN 0      4096   172.24.91.234:19333      0.0.0.0:*    users:(("weed",pid=797780,fd=10))
+tcp   LISTEN 0      4096       127.0.0.1:18888      0.0.0.0:*    users:(("weed",pid=797780,fd=57))
+```
 ### 使用别的端口
 
 ### 增加容量
