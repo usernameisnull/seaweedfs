@@ -53,3 +53,22 @@ Large Disk 版本（增加 build tags）
 ```txt
 build_flags: -tags 5BytesOffset
 ```
+
+## 其他
+### 为啥version子命令会输出30GB？
+```cgo
+ weed version
+version 30GB 4.07 bc853bdee5c2b34ae0423e5c2c9f1b8b30196bcb linux amd64
+
+For enterprise users, please visit https://seaweedfs.com for SeaweedFS Enterprise Edition,
+which has a self-healing storage format with better data protection
+```
+
+### github的release页面多个版本有什么区别
+每个CPU和操作系统都有这4种版本
+```cgo
+linux_amd64.tar.gz
+linux_amd64_full.tar.gz
+linux_amd64_full_large_disk.tar.gz
+linux_amd64_large_disk.tar.gz
+```

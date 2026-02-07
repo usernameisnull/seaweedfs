@@ -24,6 +24,11 @@ tcp   LISTEN 0      4096   172.24.91.234:18888      0.0.0.0:*    users:(("weed",
 tcp   LISTEN 0      4096   172.24.91.234:19333      0.0.0.0:*    users:(("weed",pid=797780,fd=10))
 tcp   LISTEN 0      4096       127.0.0.1:18888      0.0.0.0:*    users:(("weed",pid=797780,fd=57))
 ```
+
+### 4.04版本添加了mini子命令
+- release: https://github.com/seaweedfs/seaweedfs/releases/tag/4.04
+- pr: https://github.com/seaweedfs/seaweedfs/pull/7831
+
 ### 使用别的端口
 
 ### 增加容量
