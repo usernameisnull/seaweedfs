@@ -65,7 +65,7 @@ which has a self-healing storage format with better data protection
 ```
 
 ### github的release页面多个版本有什么区别
-每个CPU和操作系统都有这4种版本
+每个CPU和操作系统都有这4种版本, [What's the difference between large_disk and large_disk_full?](https://github.com/seaweedfs/seaweedfs/wiki/FAQ#whats-the-difference-between-large_disk-and-large_disk_full)
 ```cgo
 linux_amd64.tar.gz
 linux_amd64_full.tar.gz
