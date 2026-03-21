@@ -29,6 +29,13 @@ tcp   LISTEN 0      4096       127.0.0.1:18888      0.0.0.0:*    users:(("weed",
 - release: https://github.com/seaweedfs/seaweedfs/releases/tag/4.04
 - pr: https://github.com/seaweedfs/seaweedfs/pull/7831
 
+```cgo
+export AWS_ACCESS_KEY_ID=admin
+export AWS_SECRET_ACCESS_KEY=Root@123!
+mkdir -p /tmp/seaweed 
+weed mini -dir=/tmp/seaweed
+```
+
 ### 使用别的端口
 
 ### 增加容量
